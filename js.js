@@ -37,5 +37,4 @@ function operate (num1, num2, operator) {
             
     }
 }
-
-//test(works):operate (2, 3, "+");
+//test of operate-function(works): operate (2, 3, "+");
