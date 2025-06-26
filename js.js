@@ -20,26 +20,26 @@ const buttonCalc = document.querySelector("#buttonCalc");
 const buttonC = document.querySelector("#buttonC");
 
 
-let num1;
-let num2;
-let operator;
+let num1 = null;
+let num2 = null;
+let operator = null;
 let displayContent;
 
 
 function add (num1, num2) {
-    console.log(num1 + num2);
+    return displayContent = num1 + num2;
 }
 
 function subtract (num1, num2) {
-    return num1 - num2;
+    return displayContent = num1 - num2;
 }
 
 function multiply (num1, num2) {
-    return num1 * num2;
+    return displayContent = num1 * num2;
 }
 
 function divide (num1, num2) {
-    return num1 / num2;
+    return displayContent = num1 / num2;
 }
 
 function operate (num1, num2, operator) {
@@ -57,11 +57,11 @@ function operate (num1, num2, operator) {
             divide (num1, num2);
             break;
         default:
-            console.log(`Operate-switch-statement did'nt work. Operator is ${operator}.`);
-            
-    }
+            console.log("Operate-switch-statement did'nt work. No operator recognized.");     
+    };
+    display.textContent = displayContent;
 }
-//test of operate-function(works): operate (2, 3, "+");
+//test of operate-function(works): operate (2, 9, "+");
 
 
 function fillDisplay (displayContent) {
@@ -73,9 +73,9 @@ button0.addEventListener("click", () => {
     displayContent = "0";
     fillDisplay (displayContent);
 
-    if (num1 === undefined) {
+    if (num1 === null) {
         num1 = "0";
-    } else if (num2 === undefined) {
+    } else if (num2 === null) {
         num2 = "0";
     } 
 });
@@ -83,9 +83,9 @@ button1.addEventListener("click", () => {
     displayContent = "1";
     fillDisplay (displayContent);
 
-    if (num1 === undefined) {
+    if (num1 === null) {
         num1 = "1";
-    } else if (num2 === undefined) {
+    } else if (num2 === null) {
         num2 = "1";
     } 
 });
@@ -93,9 +93,9 @@ button2.addEventListener("click", () => {
     displayContent = "2";
     fillDisplay (displayContent);
 
-    if (num1 === undefined) {
+    if (num1 === null) {
         num1 = "2";
-    } else if (num2 === undefined) {
+    } else if (num2 === null) {
         num2 = "2";
     } 
 });
@@ -103,9 +103,9 @@ button3.addEventListener("click", () => {
     displayContent = "3";
     fillDisplay (displayContent);
 
-    if (num1 === undefined) {
+    if (num1 === null) {
         num1 = "3";
-    } else if (num2 === undefined) {
+    } else if (num2 === null) {
         num2 = "3";
     } 
 });
@@ -113,9 +113,9 @@ button4.addEventListener("click", () => {
     displayContent = "4";
     fillDisplay (displayContent);
 
-    if (num1 === undefined) {
+    if (num1 === null) {
         num1 = "4";
-    } else if (num2 === undefined) {
+    } else if (num2 === null) {
         num2 = "4";
     } 
 });
@@ -123,9 +123,9 @@ button5.addEventListener("click", () => {
     displayContent = "5";
     fillDisplay (displayContent);
 
-    if (num1 === undefined) {
+    if (num1 === null) {
         num1 = "5";
-    } else if (num2 === undefined) {
+    } else if (num2 === null) {
         num2 = "5";
     } 
 });
@@ -133,9 +133,9 @@ button6.addEventListener("click", () => {
     displayContent = "6";
     fillDisplay (displayContent);
 
-    if (num1 === undefined) {
+    if (num1 === null) {
         num1 = "6";
-    } else if (num2 === undefined) {
+    } else if (num2 === null) {
         num2 = "6";
     } 
 });
@@ -143,9 +143,9 @@ button7.addEventListener("click", () => {
     displayContent = "7";
     fillDisplay (displayContent);
 
-    if (num1 === undefined) {
+    if (num1 === null) {
         num1 = "7";
-    } else if (num2 === undefined) {
+    } else if (num2 === null) {
         num2 = "7";
     } 
 });
@@ -153,9 +153,9 @@ button8.addEventListener("click", () => {
     displayContent = "8";
     fillDisplay (displayContent);
 
-    if (num1 === undefined) {
+    if (num1 === null) {
         num1 = "8";
-    } else if (num2 === undefined) {
+    } else if (num2 === null) {
         num2 = "8";
     } 
 });
@@ -163,9 +163,9 @@ button9.addEventListener("click", () => {
     displayContent = "9";
     fillDisplay (displayContent);
 
-    if (num1 === undefined) {
+    if (num1 === null) {
         num1 = "9";
-    } else if (num2 === undefined) {
+    } else if (num2 === null) {
         num2 = "9";
     } 
 });
@@ -195,4 +195,10 @@ buttonDiv.addEventListener("click", () => {
     operator = "/";
 });
 
+buttonCalc.addEventListener("click", () => {
+    operate (+num1, +num2, operator);
+    num1 = null;
+    num2 = null;
+    operator = null;
+});
 
