@@ -1,8 +1,6 @@
 const display = document.querySelector(".display");
 
 const button0 = document.querySelector("#button0");
-
-
 const button1 = document.querySelector("#button1");
 const button2 = document.querySelector("#button2");
 const button3 = document.querySelector("#button3");
@@ -71,3 +69,7 @@ function fillDisplay (displayContent) {
 }
 //test function fillDisplay(works): fillDisplay(displayContent);
 
+button0.addEventListener("click", () => {
+    displayContent = "0";
+    fillDisplay (displayContent);
+});
