@@ -79,7 +79,6 @@ button0.addEventListener("click", () => {
         num2 = "0";
     } 
 });
-
 button1.addEventListener("click", () => {
     displayContent = "1";
     fillDisplay (displayContent);
@@ -90,7 +89,6 @@ button1.addEventListener("click", () => {
         num2 = "1";
     } 
 });
-
 button2.addEventListener("click", () => {
     displayContent = "2";
     fillDisplay (displayContent);
@@ -101,7 +99,6 @@ button2.addEventListener("click", () => {
         num2 = "2";
     } 
 });
-
 button3.addEventListener("click", () => {
     displayContent = "3";
     fillDisplay (displayContent);
@@ -171,6 +168,31 @@ button9.addEventListener("click", () => {
     } else if (num2 === undefined) {
         num2 = "9";
     } 
+});
+
+buttonAdd.addEventListener("click", () => {    
+    displayContent = "+";
+    fillDisplay (displayContent);
+
+    operator = "+";
+});
+buttonSub.addEventListener("click", () => {    
+    displayContent = "-";
+    fillDisplay (displayContent);
+
+    operator = "-";
+});
+buttonMult.addEventListener("click", () => {    
+    displayContent = "*";
+    fillDisplay (displayContent);
+
+    operator = "*";
+});
+buttonDiv.addEventListener("click", () => {    
+    displayContent = "/";
+    fillDisplay (displayContent);
+
+    operator = "/";
 });
 
 
