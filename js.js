@@ -73,3 +73,41 @@ button0.addEventListener("click", () => {
     displayContent = "0";
     fillDisplay (displayContent);
 });
+button1.addEventListener("click", () => {
+    displayContent = "1";
+    fillDisplay (displayContent);
+});
+button2.addEventListener("click", () => {
+    displayContent = "2";
+    fillDisplay (displayContent);
+});
+button3.addEventListener("click", () => {
+    displayContent = "3";
+    fillDisplay (displayContent);
+});
+button4.addEventListener("click", () => {
+    displayContent = "4";
+    fillDisplay (displayContent);
+});
+button5.addEventListener("click", () => {
+    displayContent = "5";
+    fillDisplay (displayContent);
+});
+button6.addEventListener("click", () => {
+    displayContent = "6";
+    fillDisplay (displayContent);
+});
+button7.addEventListener("click", () => {
+    displayContent = "7";
+    fillDisplay (displayContent);
+});
+button8.addEventListener("click", () => {
+    displayContent = "8";
+    fillDisplay (displayContent);
+});
+button9.addEventListener("click", () => {
+    displayContent = "9";
+    fillDisplay (displayContent);
+});
+
+
