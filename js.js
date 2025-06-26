@@ -1,3 +1,5 @@
+const display = document.querySelector(".display");
+
 let num1;
 let num2;
 let operator;
@@ -38,3 +40,11 @@ function operate (num1, num2, operator) {
     }
 }
 //test of operate-function(works): operate (2, 3, "+");
+
+
+let displayContent;
+
+function fillDisplay (displayContent) {
+    display.textContent = displayContent;
+}
+//test function fillDisplay(works): fillDisplay(displayContent);
