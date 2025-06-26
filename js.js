@@ -72,42 +72,105 @@ function fillDisplay (displayContent) {
 button0.addEventListener("click", () => {
     displayContent = "0";
     fillDisplay (displayContent);
+
+    if (num1 === undefined) {
+        num1 = 0;
+    } else if (num2 === undefined) {
+        num2 = 0;
+    } 
 });
+
 button1.addEventListener("click", () => {
     displayContent = "1";
     fillDisplay (displayContent);
+
+    if (num1 === undefined) {
+        num1 = 1;
+    } else if (num2 === undefined) {
+        num2 = 1;
+    } 
 });
+
 button2.addEventListener("click", () => {
     displayContent = "2";
     fillDisplay (displayContent);
+
+    if (num1 === undefined) {
+        num1 = 2;
+    } else if (num2 === undefined) {
+        num2 = 2;
+    } 
 });
+
 button3.addEventListener("click", () => {
     displayContent = "3";
     fillDisplay (displayContent);
+
+    if (num1 === undefined) {
+        num1 = 3;
+    } else if (num2 === undefined) {
+        num2 = 3;
+    } 
 });
 button4.addEventListener("click", () => {
     displayContent = "4";
     fillDisplay (displayContent);
+
+    if (num1 === undefined) {
+        num1 = 4;
+    } else if (num2 === undefined) {
+        num2 = 4;
+    } 
 });
 button5.addEventListener("click", () => {
     displayContent = "5";
     fillDisplay (displayContent);
+
+    if (num1 === undefined) {
+        num1 = 5;
+    } else if (num2 === undefined) {
+        num2 = 5;
+    } 
 });
 button6.addEventListener("click", () => {
     displayContent = "6";
     fillDisplay (displayContent);
+
+    if (num1 === undefined) {
+        num1 = 6;
+    } else if (num2 === undefined) {
+        num2 = 6;
+    } 
 });
 button7.addEventListener("click", () => {
     displayContent = "7";
     fillDisplay (displayContent);
+
+    if (num1 === undefined) {
+        num1 = 7;
+    } else if (num2 === undefined) {
+        num2 = 7;
+    } 
 });
 button8.addEventListener("click", () => {
     displayContent = "8";
     fillDisplay (displayContent);
+
+    if (num1 === undefined) {
+        num1 = 8;
+    } else if (num2 === undefined) {
+        num2 = 8;
+    } 
 });
 button9.addEventListener("click", () => {
     displayContent = "9";
     fillDisplay (displayContent);
+
+    if (num1 === undefined) {
+        num1 = 9;
+    } else if (num2 === undefined) {
+        num2 = 9;
+    } 
 });
 
 
