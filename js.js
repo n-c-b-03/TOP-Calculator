@@ -26,44 +26,6 @@ let operator = null;
 let displayContent;
 
 
-function add (num1, num2) {
-    return displayContent = num1 + num2;
-}
-
-function subtract (num1, num2) {
-    return displayContent = num1 - num2;
-}
-
-function multiply (num1, num2) {
-    return displayContent = num1 * num2;
-}
-
-function divide (num1, num2) {
-    return displayContent = num1 / num2;
-}
-
-function operate (num1, num2, operator) {
-    switch (operator) {
-        case "+" :
-            add (num1, num2);
-            break;
-        case "-" :
-            subtract (num1, num2);
-            break;
-        case "*" :
-            multiply (num1, num2);
-            break;
-        case "/" :
-            divide (num1, num2);
-            break;
-        default:
-            console.log("Operate-switch-statement did'nt work. No operator recognized.");     
-    };
-    display.textContent = displayContent;
-}
-//test of operate-function(works): operate (2, 9, "+");
-
-
 function fillDisplay (displayContent) {
     display.textContent = displayContent;
 }
@@ -202,3 +164,39 @@ buttonCalc.addEventListener("click", () => {
     operator = null;
 });
 
+function add (num1, num2) {
+    return displayContent = num1 + num2;
+}
+
+function subtract (num1, num2) {
+    return displayContent = num1 - num2;
+}
+
+function multiply (num1, num2) {
+    return displayContent = num1 * num2;
+}
+
+function divide (num1, num2) {
+    return displayContent = num1 / num2;
+}
+
+function operate (num1, num2, operator) {
+    switch (operator) {
+        case "+" :
+            add (num1, num2);
+            break;
+        case "-" :
+            subtract (num1, num2);
+            break;
+        case "*" :
+            multiply (num1, num2);
+            break;
+        case "/" :
+            divide (num1, num2);
+            break;
+        default:
+            console.log("Operate-switch-statement did'nt work. No operator recognized.");     
+    };
+    fillDisplay(displayContent);
+}
+//test of operate-function(works): operate (2, 9, "+");
