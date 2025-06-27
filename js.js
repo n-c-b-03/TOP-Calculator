@@ -103,6 +103,15 @@ buttonDiv.addEventListener("click", () => {
 });
 
 buttonCalc.addEventListener("click", () => {
+    if (num1 === null) {
+        displayContent = "No first number recognized.";
+        fillDisplay (displayContent);
+        return;
+    } else if (num2 === null) {
+        displayContent = "No second number recognized.";
+        fillDisplay (displayContent);
+        return;
+    }
     operate (+num1, +num2, operator);
 
     num1 = null;
@@ -159,3 +168,6 @@ function operate (num1, num2, operator) {
     fillDisplay(displayContent);
 }
 //test of operate-function(works): operate (2, 9, "+");
+
+// ask Niclas: double ifs in function digitListener necessary? And is it possible to have the C button set the displayContent to the html-default instead of 
+// having to type displayContent = "Display Content"?
