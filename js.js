@@ -104,6 +104,7 @@ buttonDiv.addEventListener("click", () => {
 
 buttonCalc.addEventListener("click", () => {
     operate (+num1, +num2, operator);
+    
     num1 = null;
     num2 = null;
     operator = null;
@@ -122,6 +123,11 @@ function multiply (num1, num2) {
 }
 
 function divide (num1, num2) {
+    if (num2 === 0) {
+        displayContent = "Please do not try to divide by 0.";
+        fillDisplay(displayContent);
+        return;
+    }
     return displayContent = num1 / num2;
 }
 
