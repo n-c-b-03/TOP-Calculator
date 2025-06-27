@@ -31,105 +31,46 @@ function fillDisplay (displayContent) {
 }
 //test function fillDisplay(works): fillDisplay(displayContent);
 
-button0.addEventListener("click", () => {
-    displayContent = "0";
+
+function digitListener (digit) {
+    displayContent = digit;
     fillDisplay (displayContent);
 
     if (num1 === null) {
-        num1 = "0";
+        num1 = digit;
     } else if (num2 === null) {
-        num2 = "0";
+        num2 = digit;
     } 
+};
+button0.addEventListener("click", () => {
+    digitListener ("0");
 });
 button1.addEventListener("click", () => {
-    displayContent = "1";
-    fillDisplay (displayContent);
-
-    if (num1 === null) {
-        num1 = "1";
-    } else if (num2 === null) {
-        num2 = "1";
-    } 
+    digitListener ("1");
 });
 button2.addEventListener("click", () => {
-    displayContent = "2";
-    fillDisplay (displayContent);
-
-    if (num1 === null) {
-        num1 = "2";
-    } else if (num2 === null) {
-        num2 = "2";
-    } 
+    digitListener ("2");
 });
 button3.addEventListener("click", () => {
-    displayContent = "3";
-    fillDisplay (displayContent);
-
-    if (num1 === null) {
-        num1 = "3";
-    } else if (num2 === null) {
-        num2 = "3";
-    } 
+    digitListener ("3");
 });
 button4.addEventListener("click", () => {
-    displayContent = "4";
-    fillDisplay (displayContent);
-
-    if (num1 === null) {
-        num1 = "4";
-    } else if (num2 === null) {
-        num2 = "4";
-    } 
+    digitListener ("4");
 });
 button5.addEventListener("click", () => {
-    displayContent = "5";
-    fillDisplay (displayContent);
-
-    if (num1 === null) {
-        num1 = "5";
-    } else if (num2 === null) {
-        num2 = "5";
-    } 
+    digitListener ("5");
 });
 button6.addEventListener("click", () => {
-    displayContent = "6";
-    fillDisplay (displayContent);
-
-    if (num1 === null) {
-        num1 = "6";
-    } else if (num2 === null) {
-        num2 = "6";
-    } 
+    digitListener ("6");
 });
 button7.addEventListener("click", () => {
-    displayContent = "7";
-    fillDisplay (displayContent);
-
-    if (num1 === null) {
-        num1 = "7";
-    } else if (num2 === null) {
-        num2 = "7";
-    } 
+    digitListener ("7");
 });
 button8.addEventListener("click", () => {
-    displayContent = "8";
-    fillDisplay (displayContent);
-
-    if (num1 === null) {
-        num1 = "8";
-    } else if (num2 === null) {
-        num2 = "8";
-    } 
+    digitListener ("8");
 });
 button9.addEventListener("click", () => {
-    displayContent = "9";
-    fillDisplay (displayContent);
-
-    if (num1 === null) {
-        num1 = "9";
-    } else if (num2 === null) {
-        num2 = "9";
-    } 
+    digitListener ("9");
 });
 
 buttonAdd.addEventListener("click", () => {    
