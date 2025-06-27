@@ -33,14 +33,24 @@ function fillDisplay (displayContent) {
 
 
 function digitListener (digit) {
-    displayContent = digit;
+
+    if (num1 === null && operator === null) {
+        num1 = digit;
+        displayContent = num1;
+    } else if (num1 != null && operator === null) {
+        num1 += digit;
+        displayContent = num1;
+    }
+    else if (num2 === null && operator != null) {
+        num2 = digit;
+        displayContent = num2;
+    } else if (num2 != null && operator != null) {
+        num2 += digit;
+        displayContent = num2;
+    }
+
     fillDisplay (displayContent);
 
-    if (num1 === null) {
-        num1 = digit;
-    } else if (num2 === null) {
-        num2 = digit;
-    } 
 };
 button0.addEventListener("click", () => {
     digitListener ("0");
