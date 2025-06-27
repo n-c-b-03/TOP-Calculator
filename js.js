@@ -73,29 +73,23 @@ button9.addEventListener("click", () => {
     digitListener ("9");
 });
 
-buttonAdd.addEventListener("click", () => {    
-    displayContent = "+";
+function operatorListener (op) {
+    displayContent = op;
     fillDisplay (displayContent);
 
-    operator = "+";
+    operator = op;
+};
+buttonAdd.addEventListener("click", () => {    
+    operatorListener ("+");
 });
 buttonSub.addEventListener("click", () => {    
-    displayContent = "-";
-    fillDisplay (displayContent);
-
-    operator = "-";
+    operatorListener ("-");
 });
 buttonMult.addEventListener("click", () => {    
-    displayContent = "*";
-    fillDisplay (displayContent);
-
-    operator = "*";
+    operatorListener ("*");
 });
 buttonDiv.addEventListener("click", () => {    
-    displayContent = "/";
-    fillDisplay (displayContent);
-
-    operator = "/";
+    operatorListener ("/");
 });
 
 buttonCalc.addEventListener("click", () => {
