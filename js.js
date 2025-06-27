@@ -104,11 +104,19 @@ buttonDiv.addEventListener("click", () => {
 
 buttonCalc.addEventListener("click", () => {
     operate (+num1, +num2, operator);
-    
+
     num1 = null;
     num2 = null;
     operator = null;
 });
+
+buttonC.addEventListener("click", () => {
+    num1 = null;
+    num2 = null; 
+    operator = null;
+    displayContent = "Display Content";
+    fillDisplay(displayContent);
+})
 
 function add (num1, num2) {
     return displayContent = num1 + num2;
