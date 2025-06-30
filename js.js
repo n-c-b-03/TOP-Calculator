@@ -37,15 +37,13 @@ function digitListener (digit) {
         num1 = null;
     }
 
-    if (num1 === null && operator === null) {
+    if ((num1 === 0 || num1 === null) && operator === null) {
         num1 = digit;
         displayContent = num1;
     } else if (num1 != null && operator === null) {
         num1 += digit;
         displayContent = num1;
-    }
-
-    if (num2 === null && operator != null) {
+    } else if (num2 === null && operator != null) {
         num2 = digit;
         displayContent = num2;
     } else if (num2 != null && operator != null) {
