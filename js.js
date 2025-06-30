@@ -32,7 +32,7 @@ function fillDisplay (displayContent) {
 }
 
 function digitListener (digit) {
-    if (result != null) {
+    if (result != null && operator === null) {
         result = null;
         num1 = null;
     }
