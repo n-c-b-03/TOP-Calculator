@@ -12,13 +12,26 @@ body {
 .calculator {
     border: 2px solid darkgray;
     padding: 5px;
+    border-radius: 10px;
 }
 
 .display {
     margin-bottom: 20px;
     background-color: rgba(3, 75, 47, 0.301);
-    border-radius: 15px;
+    border-radius: 5px;
     padding: 150px 20px 10px 20px;
     text-align: end;
     font-size: 50px;
+}
+
+.buttonDiv {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px
+}
+
+.buttons {
+    background-color: rgba(52, 52, 114, 0.308);
+    border-radius: 5px;
+    font-size: 30px;
 }
