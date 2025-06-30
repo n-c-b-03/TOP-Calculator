@@ -41,7 +41,8 @@ function digitListener (digit) {
         num1 += digit;
         displayContent = num1;
     }
-    else if (num2 === null && operator != null) {
+
+    if (num2 === null && operator != null) {
         num2 = digit;
         displayContent = num2;
     } else if (num2 != null && operator != null) {
@@ -83,11 +84,24 @@ button9.addEventListener("click", () => {
     digitListener ("9");
 });
 
-function operatorListener (op) {
-    displayContent = op;
-    fillDisplay (displayContent);
 
-    operator = op;
+function operatorListener (op) {
+    if (operator === null) {
+        displayContent = op;
+        fillDisplay (displayContent);
+    
+        operator = op;   
+    } else if (operator != null && num2 != null) {
+        operate (+num1, +num2, operator);
+        let result = displayContent;
+        displayContent += ` ${op}`;
+        fillDisplay(displayContent);
+
+        num1 = result;
+        operator = op;
+        num2 = null;
+        console.log(num1, operator, num2);
+    }
 };
 buttonAdd.addEventListener("click", () => {    
     operatorListener ("+");
@@ -169,5 +183,4 @@ function operate (num1, num2, operator) {
 }
 //test of operate-function(works): operate (2, 9, "+");
 
-// ask Niclas: double ifs in function digitListener necessary? And is it possible to have the C button set the displayContent to the html-default instead of 
-// having to type displayContent = "Display Content"?
+//backspace-button: just for multi-digit numbers; use splice on the displayContent
