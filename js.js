@@ -139,6 +139,7 @@ buttonC.addEventListener("click", () => {
     num1 = null;
     num2 = null; 
     operator = null;
+    result = null;
     displayContent = "Display Content";
     fillDisplay(displayContent);
 })
