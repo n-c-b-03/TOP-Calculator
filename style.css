@@ -13,3 +13,12 @@ body {
     border: 2px solid darkgray;
     padding: 5px;
 }
+
+.display {
+    margin-bottom: 20px;
+    background-color: rgba(3, 75, 47, 0.301);
+    border-radius: 15px;
+    padding: 150px 20px 10px 20px;
+    text-align: end;
+    font-size: 50px;
+}
