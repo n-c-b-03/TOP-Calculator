@@ -20,7 +20,7 @@ const buttonCalc = document.querySelector("#buttonCalc");
 const buttonC = document.querySelector("#buttonC");
 
 
-let num1 = null;
+let num1 = 0;
 let num2 = null;
 let operator = null;
 let displayContent;
@@ -136,11 +136,11 @@ buttonCalc.addEventListener("click", () => {
 });
 
 buttonC.addEventListener("click", () => {
-    num1 = null;
+    num1 = 0;
     num2 = null; 
     operator = null;
     result = null;
-    displayContent = "Display Content";
+    displayContent = "0";
     fillDisplay(displayContent);
 })
 
