@@ -24,6 +24,7 @@ let num1 = null;
 let num2 = null;
 let operator = null;
 let displayContent;
+let result;
 
 
 function fillDisplay (displayContent) {
@@ -100,7 +101,6 @@ function operatorListener (op) {
         num1 = result;
         operator = op;
         num2 = null;
-        console.log(num1, operator, num2);
     }
 };
 buttonAdd.addEventListener("click", () => {    
@@ -128,7 +128,7 @@ buttonCalc.addEventListener("click", () => {
     }
     operate (+num1, +num2, operator);
 
-    num1 = null;
+    num1 = result;
     num2 = null;
     operator = null;
 });
@@ -142,15 +142,18 @@ buttonC.addEventListener("click", () => {
 })
 
 function add (num1, num2) {
-    return displayContent = num1 + num2;
+    result = Math.round((+num1 + +num2) * 100) / 100;
+    return displayContent = result;
 }
 
 function subtract (num1, num2) {
-    return displayContent = num1 - num2;
+    result = Math.round((+num1 - +num2) * 100) / 100;
+    return displayContent = result;
 }
 
 function multiply (num1, num2) {
-    return displayContent = num1 * num2;
+    result = Math.round(+num1 * +num2 * 100) / 100;
+    return displayContent = result;
 }
 
 function divide (num1, num2) {
@@ -159,7 +162,8 @@ function divide (num1, num2) {
         fillDisplay(displayContent);
         return;
     }
-    return displayContent = num1 / num2;
+    result = Math.round(+num1 / +num2 * 100) / 100;
+    return displayContent = result;
 }
 
 function operate (num1, num2, operator) {
@@ -181,6 +185,7 @@ function operate (num1, num2, operator) {
     };
     fillDisplay(displayContent);
 }
-//test of operate-function(works): operate (2, 9, "+");
 
-//backspace-button: just for multi-digit numbers; use splice on the displayContent
+
+//backspace-button: just for multi-digit numbers; use splice on the displayContent,
+// to delete the last character of this string
