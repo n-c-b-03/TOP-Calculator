@@ -24,7 +24,7 @@ let num1 = null;
 let num2 = null;
 let operator = null;
 let displayContent;
-let result;
+let result = null;
 
 
 function fillDisplay (displayContent) {
@@ -34,6 +34,10 @@ function fillDisplay (displayContent) {
 
 
 function digitListener (digit) {
+    if (result != null) {
+        result = null;
+        num1 = null;
+    }
 
     if (num1 === null && operator === null) {
         num1 = digit;
