@@ -30,8 +30,6 @@ let result = null;
 function fillDisplay (displayContent) {
     display.textContent = displayContent;
 }
-//test function fillDisplay(works): fillDisplay(displayContent);
-
 
 function digitListener (digit) {
     if (result != null) {
