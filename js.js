@@ -155,6 +155,10 @@ buttonC.addEventListener("click", () => {
     fillDisplay(displayContent);
 })
 
+window.addEventListener ("keydown", e => {
+    //test of EventListener (works): console.log(e.key);
+})
+
 function add (num1, num2) {
     result = Math.round((+num1 + +num2) * 100) / 100;
     return displayContent = result;
