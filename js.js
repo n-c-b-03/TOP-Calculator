@@ -156,9 +156,7 @@ buttonC.addEventListener("click", () => {
 })
 
 window.addEventListener ("keydown", e => {
-    let clickedKey = e.key;
-
-    switch (clickedKey) {
+    switch (e.key) {
         case "0" :
             digitListener ("0");
             break;
@@ -188,6 +186,19 @@ window.addEventListener ("keydown", e => {
             break;
         case "9" :
             digitListener ("9");
+            break;
+
+        case "+" :
+            operatorListener ("+");
+            break;
+        case "-" :
+            operatorListener ("-");
+            break;
+        case "*" :
+            operatorListener ("*");
+            break;
+        case "/" :
+            operatorListener ("/");
             break;
     }
 })
