@@ -10,6 +10,7 @@ const button6 = document.querySelector("#button6");
 const button7 = document.querySelector("#button7");
 const button8 = document.querySelector("#button8");
 const button9 = document.querySelector("#button9");
+const buttonDec = document.querySelector("#buttonDec");
 
 const buttonAdd = document.querySelector("#buttonAdd");
 const buttonSub = document.querySelector("#buttonSub");
@@ -84,6 +85,9 @@ button8.addEventListener("click", () => {
 });
 button9.addEventListener("click", () => {
     digitListener ("9");
+});
+buttonDec.addEventListener("click", () => {
+    digitListener (".");
 });
 
 
