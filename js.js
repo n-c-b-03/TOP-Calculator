@@ -123,6 +123,7 @@ function calcButton () {
         fillDisplay (displayContent);
         return;
     } else if (num2 === null) {
+        console.log ("Before", num1, operator, num2, result)
         displayContent = "No second number recognized.";
         fillDisplay (displayContent);
         return;
@@ -135,6 +136,7 @@ function calcButton () {
 }
 buttonCalc.addEventListener("click", () => {
    calcButton();
+//    buttonCalc.blur();
 });
 
 function backspace () {
@@ -226,6 +228,7 @@ window.addEventListener ("keydown", e => {
             backspace();
             break;
     }
+    e.target.blur();
 })
 
 function add (num1, num2) {
