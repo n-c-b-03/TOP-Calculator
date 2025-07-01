@@ -137,7 +137,7 @@ buttonCalc.addEventListener("click", () => {
    calcButton();
 });
 
-buttonBack.addEventListener("click", () => {
+function backspace () {
     if (num1 != null && displayContent === num1) {  
         num1 = num1.toString();
         num1 = num1.slice(0, -1);
@@ -147,15 +147,22 @@ buttonBack.addEventListener("click", () => {
         displayContent = num2;
      } 
     fillDisplay (displayContent);
+
+}
+buttonBack.addEventListener("click", () => {
+    backspace();
 })
 
-buttonC.addEventListener("click", () => {
+function funcButtonC () {
     num1 = 0;
     num2 = null; 
     operator = null;
     result = null;
     displayContent = "0";
     fillDisplay(displayContent);
+}
+buttonC.addEventListener("click", () => {
+    funcButtonC();
 })
 
 window.addEventListener ("keydown", e => {
@@ -205,7 +212,17 @@ window.addEventListener ("keydown", e => {
             break;
 
         case "=" :
+        case "Enter" :
             calcButton();
+            break;
+
+        case "c" :
+        case "C" :
+            funcButtonC();
+            break;
+
+        case "Backspace" :
+            backspace();
             break;
     }
 })
