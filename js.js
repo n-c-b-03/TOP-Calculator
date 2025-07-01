@@ -161,7 +161,7 @@ window.addEventListener ("keydown", e => {
 
     switch (clickedKey) {
         case "1" :
-            console.log("1 works!");
+            digitListener ("1");
             break;
     }
 })
