@@ -218,6 +218,7 @@ window.addEventListener ("keydown", e => {
 
         case "c" :
         case "C" :
+        case "Delete" :
             funcButtonC();
             break;
 
