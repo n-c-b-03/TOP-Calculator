@@ -157,6 +157,13 @@ buttonC.addEventListener("click", () => {
 
 window.addEventListener ("keydown", e => {
     //test of EventListener (works): console.log(e.key);
+    let clickedKey = e.key;
+
+    switch (clickedKey) {
+        case "1" :
+            console.log("1 works!");
+            break;
+    }
 })
 
 function add (num1, num2) {
