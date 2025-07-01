@@ -135,16 +135,14 @@ buttonCalc.addEventListener("click", () => {
 });
 
 buttonBack.addEventListener("click", () => {
-    //backSpace if user is currently entering num1; use displayContent = num1 instead of operator === null?:
-    if (num1 != null && operator === null) {  
+    if (num1 != null && displayContent === num1) {  
+        num1 = num1.toString();
         num1 = num1.slice(0, -1);
         displayContent = num1;
-    } 
-    //backSpace if user is currently entering num2; displayContent === num2 so it doesnt react if the result is shown
-    else if (num2 != null && operator != null && displayContent === num2) {        
+    } else if (num2 != null && displayContent === num2) {        
         num2 = num2.slice(0, -1);
         displayContent = num2;
-    }
+     } 
     fillDisplay (displayContent);
 })
 
@@ -203,5 +201,3 @@ function operate (num1, num2, operator) {
 }
 
 
-//backspace-button: just for multi-digit numbers; use splice on the displayContent,
-// to delete the last character of this string
