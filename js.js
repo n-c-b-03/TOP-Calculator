@@ -28,7 +28,6 @@ let operator = null;
 let displayContent;
 let result = null;
 
-
 function fillDisplay (displayContent) {
     display.textContent = displayContent;
 }
@@ -87,7 +86,9 @@ button9.addEventListener("click", () => {
     digitListener ("9");
 });
 buttonDec.addEventListener("click", () => {
-    digitListener (".");
+    if (!displayContent.includes(".")) {
+        digitListener (".");
+    }
 });
 
 
