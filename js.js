@@ -117,7 +117,7 @@ buttonDiv.addEventListener("click", () => {
     operatorListener ("/");
 });
 
-buttonCalc.addEventListener("click", () => {
+function calcButton () {
     if (num1 === null) {
         displayContent = "No first number recognized.";
         fillDisplay (displayContent);
@@ -132,6 +132,9 @@ buttonCalc.addEventListener("click", () => {
     num1 = result;
     num2 = null;
     operator = null;
+}
+buttonCalc.addEventListener("click", () => {
+   calcButton();
 });
 
 buttonBack.addEventListener("click", () => {
@@ -199,6 +202,10 @@ window.addEventListener ("keydown", e => {
             break;
         case "/" :
             operatorListener ("/");
+            break;
+
+        case "=" :
+            calcButton();
             break;
     }
 })
