@@ -17,6 +17,7 @@ const buttonMult = document.querySelector("#buttonMult");
 const buttonDiv = document.querySelector("#buttonDiv");
 const buttonCalc = document.querySelector("#buttonCalc");
 
+const buttonBack = document.querySelector("#buttonBack");
 const buttonC = document.querySelector("#buttonC");
 
 
@@ -132,6 +133,20 @@ buttonCalc.addEventListener("click", () => {
     num2 = null;
     operator = null;
 });
+
+buttonBack.addEventListener("click", () => {
+    //backSpace if user is currently entering num1; use displayContent = num1 instead of operator === null?:
+    if (num1 != null && operator === null) {  
+        num1 = num1.slice(0, -1);
+        displayContent = num1;
+    } 
+    //backSpace if user is currently entering num2; displayContent === num2 so it doesnt react if the result is shown
+    else if (num2 != null && operator != null && displayContent === num2) {        
+        num2 = num2.slice(0, -1);
+        displayContent = num2;
+    }
+    fillDisplay (displayContent);
+})
 
 buttonC.addEventListener("click", () => {
     num1 = 0;
