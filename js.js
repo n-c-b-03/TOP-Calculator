@@ -204,7 +204,12 @@ window.addEventListener ("keydown", e => {
         case "9" :
             digitListener ("9");
             break;
-
+        case "." :
+            if (!displayContent.includes(".")) {
+                digitListener (".");
+            };
+            break;  
+                  
         case "+" :
             operatorListener ("+");
             break;
